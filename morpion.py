@@ -1,5 +1,10 @@
 from turtle import*
 from random import randint
+"""
+Petit jeu de morpion très basique fait avec la librairie turtle de python3 durant
+mon premier mois de découverte de l'informatique
+"""
+#Création de la grille
 penup()
 goto(-150,0)
 pendown()
@@ -18,15 +23,23 @@ goto(50,-100)
 pendown()
 forward(300)
 right(90)
+#Initialisation des joueurs
 a=str(input('joueur1 '))
 b=str(input('joueur2 '))
+#Tirage au sort du premier joueur à jouer
 c=randint(1,2)
 if c==1:
     print(a,'commence')
 if c==2:
     print(b,'commence')
-cpt1=0
+ 
+
+cpt1=0 #compteur des tours joués
+
 def croix():
+    """
+    Dessine une croix depuis l'emplacement où se trouve la tortue
+    """
     width(5)
     left(45)
     pendown()
@@ -57,6 +70,7 @@ a6=5
 a7=6
 a8=7
 a9=8
+#début du jeu
 while cpt1<9 and d!=0:
     width(5)
     cpt1+=1
